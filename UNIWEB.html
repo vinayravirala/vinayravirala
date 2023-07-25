@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vignan.ac.in</title>
+    <style>
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;
+}
+.slideshow-container {
+  max-width: 5000px;
+  position: relative;
+  margin: auto;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: transperant;
+}
+.flex-container .box {
+  background-color: skyblue;
+  width: 70%;
+  margin: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+.flex-contain {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: transperant;
+}
+.flex-contain .box {
+  background-color: transperant;
+  width: 70%;
+  margin: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+.flex-cont {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: transperant;
+}
+.flex-cont .box {
+  background-color: #00ff99;
+  width: 70%;
+  margin: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+j{
+font-size: 20px;
+}
+h2 {
+  font-size: 35px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1><img src="logo.jpg" alt= vignan><h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="uniweb.html">Home</a></li>
+            <li><a href="https://vignan.ac.in/structure.php">About</a></li>
+	    <li><a href="https://vignan.ac.in/research.php">Research</a></li>
+            <li><a href="https://www.vignan.ac.in/libhome.php">Library</a></li>
+<li><a href="https://vignan.ac.in/alumni/">Alumni</a></li>
+            <li><a href="https://www.vignan.ac.in/v-sat/">Admissions</a></li>
+            <li><a href="https://www.vignan.ac.in/contact.php">Contact</a></li>
+        </ul>
+    </nav>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="wb1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="wb2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="wb3.jpeg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); 
+}
+</script>
+ 
+        <h1>About Vignan University</h1>
+        <p><j>Vignan's Foundation for Science, Technology & Research is a Deemed university in the Guntur district in Andhra Pradesh, India. It is in the rural area of Vadlamudi, in the southeast of Guntur City and the northeast of Tenali City.The National Institutional Ranking Framework (NIRF) ranked it 75 among Universities in 2023.</j></p>
+<h2>Vision</h2>
+<p class="p1"><j>To evolve into a centre of excellence in Science & Technology through creative and innovative practices in teaching - learning, towards promoting academic achievement and research excellence to produce internationally accepted, competitive and world class professionals who are psychologically strong & emotionally balanced imbued with social consciousness & ethical values.</j></p>
+<h2>Mission</h2>
+<p class="p1"><j>To provide high quality academic programmes, training activities, research facilities and opportunities supported by continuous industry - institute interaction aimed at promoting employability, entrepreneurship, leadership and research aptitude among students and contribute to the economic and technological development of the region, state and nation.</j></p>
+        <h2>Courses We Offer</h2>
+        
+<div class="flex-container">
+ <div class="box"><a href="https://vignan.ac.in/csehome.php"style="color: #8ebf42"><b>Computer Science and Engineering</b></a>
+<div<p class="p1">Computer Science and Engineering is the soul and psyche of many engineering branches. These fields are instrumental in bringing the world to where it is today. Computer Science & Engineering (CSE) course was started in the year 1997 in this institution.Department of CSE offers the following UG and PG programs.<br> </p></v></div>
+  <div class="box"><a href="https://vignan.ac.in/ithome.php"style="color: #095484"><b>Information Technology</b></a><br>
+<p class="p1">Information Technology is the soul and psyche of many engineering branches. These fields are instrumental in bringing the world to where it is today. B.Tech in Information technology course was started in the year 1999, MCA course in 2006, Ph.D in 2013 and BCA in 2015.</p></div>
+  <div class="box"><a href="https://vignan.ac.in/eeehome.php"style="color: #095484"><b>Electrical & Electronical Engineering</b></a><br>
+<p class="p1">The Department of Electrical Engineering, one of the nine founding Departments of Vignan's Foundation for Science, Technology & Research (Deemed to be University), is started in the year 2009 by adopting the motto: Excellence in Engineering Education.</p></div>
+  <div class="box"><a href="https://vignan.ac.in/mechhome.php"style="color: #095484"><b>Mechanical Engineering</b></a><br>
+<p class="p1"> VFSTR offers Mechanical Engineering programs at bachelor, master and PhD levels. Our strong and interactive curriculum incorporates learning with hands-on practice that makes the students capable of taking their career to the next level.Right from its inception in 1997, the Department has been focusing on quality teaching with integrated laboratory practice..</p></div>
+</div>
+<h2> Our Facilities</h2>
+<div class="flex-contain">
+<div class="box"><img src="caf.jpg" alt= vignan width="500" height="300"></div>
+<div class="box"><img src="lib.jpg" alt= vignan width="500" height="300"></div>
+<div class="box"><img src="ground.jpg" alt= vignan width="450" height="300"></div>
+</div>
+<div class="flex-cont">
+<div class="box"><b>Best Cafetaria</b>
+<p class="p1">A well furnished and spacious cafeteria worth of Rs 1.5 Crore, with a 400 seating capacity is located in the heart of the campus. It provides all types of nutritious and hygienic eatables and beverages to cater to the multi-ethnic tastes of the students, staff and visitors at reasonable prices.
+Apart from the college canteen, there are several food kiosks providing snacks and refreshments operating in and around the academic blocks on the campus. This Canteen is open on all working days, and also during additional working hours</p></div>
+<div class="box"><b>World Class Library</b>
+<p class="p1">Central Library is an air conditioned, aesthetically designed facility with a built up area of 5902 Sqm surrounded by plenty of indoor greenery, modern furniture and reprographic conveniences.The library subscribes to host of on line IEEE, ASME, ASCE, Springer, JSTOR & EBSCO journals which fosters research zeal, among both the faculty & students.Multimedia systems have been installed in the library to enable learning through digital resources like CDs, Internet etc.More than 6003 multimedia CDs are made available for easy reference.</p></div>
+<div class="box"><b>Largest Ground</b>
+<p class="p1">The campus is equipped with facilities for all outdoor games like cricket, football, volleyball, tennis, basketball, and a 400-meter track athletics. An Indoor Sports Complex offers provision for indoor games like table tennis, badminton etc.To keep the students motivated,the physical educational department under the supervision of a well qualified Physical Director conducts intramurals round the year for keeping the sports persons well practiced and ready to participate whenever, there is a state level or national level event.</p></div>
+</div>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="mapimg.jpg" style="width:100%">
+    </div>
+    <div class="column">
+  <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+        <label for="subject">Queries:</label>
+        <textarea id="subject" name="Queries:" placeholder="Start Writing...." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+
+    </div>
+  </div>
+<center><j><p class="p1">Vignan's Foundation for Science, Technology and Research (Deemed to be University), <br>Vadlamudi, Guntur-522213<br>
+  
+Phone: 0863-2344700 / 701<br>
+
+Email: info@vignan.ac.in</center>
+</j>
+</p>
+</div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Vignan University. All rights reserved.</p>
+    </footer>
+</body>
+</html>
