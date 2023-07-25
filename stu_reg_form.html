@@ -1,0 +1,187 @@
+<html>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr:hover {background-color: #87CEEB;}
+
+.bg-column {
+            background-image: url('reg.jpg');
+            background-size: cover;
+        }
+textarea {
+  resize: none;
+}
+h2 {
+  font-size: 25px;
+font-style: oblique;
+}
+f.italic {
+  font-style: italic;
+}
+h1 {
+  font-size: 40px;
+}
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+td {
+text-align: center;
+}
+</style>
+<title>
+Student Reg Form
+</title>
+<body>
+<table >
+<tr>
+<th colspan="2" class="bg-column"><center><h1 style="color:blue;"><f class="italic">Student Registration Form </f></h1></center></th>
+</tr>
+<tr>
+<td><h2><b>Enter Your Name</b></h2></td>
+<td>
+<form>
+<input type="text" name="name" />
+</form>
+</td>
+</tr>
+<tr>
+<td><b><h2>Enter Registration/Roll Number</h2></b></td>
+<td>
+<input type="text" name="name"/>
+</td>
+</tr>
+<tr>
+<td><b><h2>Gender</h2></b></td>
+<td>
+<form>
+ <input type="radio" id="Male" name="Gender" value="Male">
+<label for="Male">Male</label>
+  <input type="radio" id="Female" name="Gender" value="Female">
+<label for="Female">Female</label>
+ <input type="radio" id="Other" name="Gender" value="Other">
+<label for="Other">Other</label><br>
+</form>
+</td>
+</tr>
+<tr>
+<td><h2><b>Languages Known</b></h2></td>
+<td>	 
+<form>
+<input type="radio" name="English" value="on">English
+<input type="radio" name="Telugu" value="on">Telugu
+<input type="radio" name="Hindi" value="on">Hindi
+<input type="radio" name="Urdu" value="on">Urdu
+<input type="radio" name="Tamil" value="on">Tamil
+</form>
+</td>
+</tr>
+<tr>
+<td><b><h2>Choose Your Country</h2></b></td>
+<td>
+<form>
+<select name="Country">
+<b>
+<option value="<b>Choose....</b>" selected>Choose....</option>
+</b>
+<option value="India" >India</option>
+<option value="Sudan" >Sudan</option>
+<option value="Nepal" >Nepal</option>
+</select>
+</form>
+</td>
+<tr>
+<td><b><h2>Give Your Feedback</h2></b></td>
+<td>
+<form>
+<textarea rows="5" cols="100" placeholder="start write here....">
+</textarea>
+</form>
+</td>
+<tr><td><b><h2>Enter DOB</h2></b></td>
+
+<td>
+<form action="/action_page.php">
+  <input type="date" id="birthday" name="birthday">
+<input type="submit" value="Confirm">
+</form>
+</td>
+</tr>
+<tr>
+<td><b><h2>Choose Your Branch</h2></b></td>
+<td>
+<form>
+<select name="Branch">
+<b>
+<option value="<b>Choose....</b>" selected>Choose....</option>
+</b>
+<option value="Ph.D" >Ph.D</option>
+<option value="M.Tech" >M.Tech</option>
+<option value="B.Tech" >B.Tech</option>
+<option value="others" >others</option>
+</select>
+ <input type="radio" id="CSE" name="Gender" value="CSE">
+<label for="CSE">CSE</label>
+  <input type="radio" id="IT" name="Gender" value="IT">
+<label for="IT">IT</label>
+ <input type="radio" id="ECE" name="Gender" value="ECE">
+<label for="ECE">ECE</label>
+ <input type="radio" id="VLSI" name="Gender" value="VLSI">
+<label for="VLSI">VLSI</label>
+  <input type="radio" id="Food Tech" name="Gender" value="Food Tech">
+<label for="Food Tech">Food Tech</label>
+ <input type="radio" id="Other" name="Gender" value="Other">
+<label for="Other">Other</label><br>
+<br>
+<textarea rows="1" cols="100" placeholder="If others specify....">
+</textarea>
+
+</form>
+</td>
+</tr>
+<tr>
+<td><b><h2>Choose Your File</h2></b></td>
+<td>
+<form action="/action_page.php">
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+  <input type="submit" value="confirm">
+</form>
+</td>
+</tr>
+<tr>
+<td><h2><b>Enter Password</b></h2></td>
+<td>
+<form>
+<input type="text" name="password"/>
+</form>
+</td>
+</tr>
+<tr>
+<td><h2><b>Confirm Password</b></h2></td>
+<td>
+<form>
+<input type="text" name="password"/>
+</form>
+</td>
+</tr>
+<TR>
+<TD COLSPAN="2">
+<form action="/action_page.php">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1">I agree that all data is correct</label><br>
+</form>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<form action="/action_page.php">
+<input type="submit" value="Confirm">
+<input type="reset" value="clear">
+</form>
+</td>
+</tr>
+</body>
+</html>
